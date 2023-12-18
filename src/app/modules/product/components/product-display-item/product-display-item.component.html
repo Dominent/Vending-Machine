@@ -1,0 +1,6 @@
+<section class="mat-elevation-z8" (click)="handleClick()">
+  <p>{{ product?.name }}</p>
+  <img [src]="'/assets/products/' + product?.imageName" />
+  <p>Quantity ({{ product?.quantity }})</p>
+  <p>${{ product?.price }}</p>
+</section>

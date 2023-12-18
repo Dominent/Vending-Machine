@@ -1,0 +1,18 @@
+:host {
+  section {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    img {
+      height: 100px;
+    }
+  }
+}

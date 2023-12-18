@@ -1,0 +1,19 @@
+:host {
+  border-radius: 5px;
+  display: flex;
+  padding: 10px;
+  ul {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

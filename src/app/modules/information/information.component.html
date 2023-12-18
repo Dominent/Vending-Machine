@@ -1,0 +1,17 @@
+<h4>Selection</h4>
+
+<ng-container *ngIf="selectedProducts$ | async as selectedProducts">
+  <ng-container *ngIf="groupProducts(selectedProducts) as groupedProducts">
+    <ul>
+      <li *ngFor="let group of groupedProducts">
+        <span>
+          {{ group.name }} <strong>({{ group.count }})</strong>
+        </span>
+      </li>
+    </ul>
+  </ng-container>
+
+  <ng-container *ngIf="!selectedProducts.length">
+    <p>No products selected.</p>
+  </ng-container>
+</ng-container>

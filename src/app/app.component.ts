@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  //TODO(PPavlov): Calculate quantities after buy
+  //TODO(PPavlov): Create admin to CRUD products in state
   title = 'vending-machine';
 }

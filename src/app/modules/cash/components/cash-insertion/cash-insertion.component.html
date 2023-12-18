@@ -1,0 +1,13 @@
+<header>
+  <h4>Insert Cash</h4>
+  <strong>$0.00</strong>
+</header>
+
+<ul>
+  <li *ngFor="let denomination of denominations">
+    <app-cash-insertion-item
+      [denomination]="denomination"
+      (onClick)="handleDenominationClick($event)"
+    ></app-cash-insertion-item>
+  </li>
+</ul>

@@ -1,0 +1,35 @@
+<ng-container
+  *ngIf="{
+    denominations: denominations$ | async,
+    totalCash: totalCash$ | async,
+    totalInsertedCash: totalInsertedCash$ | async,
+    change: change$ | async,
+    selectedProducts: selectedProducts$ | async
+  } as vm"
+>
+  <app-cash-insertion [denominations]="vm.denominations"></app-cash-insertion>
+
+  <h4>
+    Total <strong>(${{ vm?.totalCash! | round : 2 }})</strong>
+  </h4>
+
+  <h4>
+    Inserted <strong>(${{ vm?.totalInsertedCash! | round : 2 }})</strong>
+  </h4>
+
+  <app-change-return [change]="vm.change!"></app-change-return>
+
+  <footer>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!(vm.change && vm.selectedProducts?.length)"
+      (click)="handleBuy(vm.totalCash, vm.totalInsertedCash)"
+    >
+      Buy
+    </button>
+    <button mat-raised-button color="accent" (click)="handleClear()">
+      Clear
+    </button>
+  </footer>
+</ng-container>

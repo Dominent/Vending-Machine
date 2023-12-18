@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let product of products">
+    <app-product-display-item
+      [product]="product"
+      (onClick)="handleProductClick($event)"
+    ></app-product-display-item>
+  </li>
+</ul>

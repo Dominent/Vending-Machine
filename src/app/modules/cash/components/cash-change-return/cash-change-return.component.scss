@@ -1,0 +1,73 @@
+app-change-return {
+  width: 100%;
+  header {
+    text-align: center;
+  }
+}
+
+.coin-tray {
+  position: relative;
+  min-height: 50px;
+  background: #ddd; /* Light grey to simulate metal tray */
+  border-radius: 5px;
+  box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+  margin-top: 10px; /* Space from the other elements */
+  padding: 5px;
+  overflow: hidden; /* To keep coins contained */
+}
+
+.coin:hover {
+  transform: scale(1.1); /* Slightly larger on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Larger shadow on hover */
+  cursor: pointer;
+}
+
+.coin {
+  position: absolute;
+  bottom: 200px; /* Start 200px above the tray */
+  width: 30px;
+  height: 30px;
+  background-color: gold;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  /* Set up the animations */
+  animation: fall 1s ease-in, bounce 0.5s ease-out 1s,
+    stayVisible 30s linear 1.5s, fadeOut 1s ease-in-out 31.5s forwards;
+}
+
+@keyframes fall {
+  0% {
+    bottom: 200px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0; /* Land at the tray */
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 15px; /* Bounce height */
+  }
+}
+
+@keyframes stayVisible {
+  0%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
