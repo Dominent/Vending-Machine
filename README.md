@@ -1,27 +1,70 @@
-# VendingMachine
+# Vending Machine Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+## Overview
 
-## Development server
+This Vending Machine Application is a web-based application that simulates the operation of a real-world vending machine. It allows users to select products, insert coins, and receive change. The application is designed to be responsive and user-friendly.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Inventory Management**: Supports up to 15 units of each product type.
+- **Responsive Web Design**: The interface adapts to various screen sizes.
+- **Product Operations**:
+  - Retrieve initial product list from a mocked API.
+  - Perform CRUD operations on products within the application state.
+  - Note: CRUD operations do not update data in the external resource.
+- **Vending Operations**:
+  - Insert coins.
+  - Purchase products.
+  - Reset process (return coins without purchase).
+- **Change Return**: Automatically calculates and returns change.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Accepted Coin Denominations
 
-## Build
+The machine accepts the following denominations:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- 0.01
+- 0.05
+- 0.25
+- 0.50
+- 1.00
 
-## Running unit tests
+## Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Before running the application, ensure you have the following installed:
 
-## Running end-to-end tests
+- Node.js
+- npm (Node Package Manager)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Running the Application
 
-## Further help
+To get the Vending Machine Application up and running, follow these steps:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. **Clone the Repository**: Clone the project from the GitHub repository or the provided link.
+2. **Navigate to Project Directory**: Open a terminal and navigate to the project's root directory.
+3. **Install Dependencies**: Run `npm install` to install all required dependencies.
+4. **Start the Application**: You can start the application in two ways:
+   - **Separately**: Run `npm run start` for the Angular app and `npm run json-server` for the JSON server in two different terminals.
+   - **Concurrently**: Run `npm run start:concurrently` to start both the Angular app and JSON server concurrently.
+5. **Access the Application**: Once started, the application will be available at `http://localhost:4200`.
+
+## Additional Information
+
+- **Mock API**: The initial products list is fetched from a mock API using JSON server.
+- **Product Images**: Product images enhance the user interface, making product identification intuitive.
+- **Responsive Design**: The layout adjusts to different screen sizes, ensuring usability on desktops, tablets, and smartphones.
+
+## Technologies Used
+
+- Angular
+- NgRx (for state management)
+- RxJS
+- TypeScript
+- JSON Server (for mock API)
+- Jasmine and Karma (for testing)
+- Concurrently (for running multiple npm scripts concurrently)
+
+Unit Test
+![image](https://github.com/Dominent/Vending-Machine/assets/2464156/8b25cf81-8bf5-4c0d-855e-028b1a404d6f)
+
+Coverage
+![image](https://github.com/Dominent/Vending-Machine/assets/2464156/6d79344b-5f9a-49ca-944c-860fa404068f)

@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   //TODO(PPavlov): Calculate quantities after buy
   //TODO(PPavlov): Create admin to CRUD products in state
-  title = 'vending-machine';
+  //TODO(PPavlov): Revisit responsive view
 }

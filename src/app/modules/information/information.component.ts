@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IProduct, IProductGroup } from '../product/models/product.models';
 import { ProductStoreFacadeService } from '../product/store/product-store-facade.service';
@@ -9,7 +9,7 @@ import { ProductStoreFacadeService } from '../product/store/product-store-facade
   styleUrls: ['./information.component.scss'],
   host: { class: 'mat-elevation-z8' },
 })
-export class InformationComponent implements OnInit {
+export class InformationComponent {
   public selectedProducts$: Observable<IProduct[]>;
 
   constructor(private _productStoreFacadeService: ProductStoreFacadeService) {
@@ -35,6 +35,4 @@ export class InformationComponent implements OnInit {
 
     return result;
   }
-
-  ngOnInit() {}
 }

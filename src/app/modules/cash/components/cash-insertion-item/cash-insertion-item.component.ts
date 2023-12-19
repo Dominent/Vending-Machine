@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IDenomination } from '../../models/cash.models';
 
 @Component({
@@ -7,17 +7,13 @@ import { IDenomination } from '../../models/cash.models';
   styleUrls: ['./cash-insertion-item.component.scss'],
   host: { class: 'mat-elevation-z8' },
 })
-export class CashInsertionItemComponent implements OnInit {
+export class CashInsertionItemComponent {
   @Input()
   public denomination: IDenomination | undefined;
 
   @Output()
   public onClick: EventEmitter<IDenomination> =
     new EventEmitter<IDenomination>();
-
-  constructor() {}
-
-  ngOnInit() {}
 
   handleClick() {
     this.onClick.emit(this.denomination);
