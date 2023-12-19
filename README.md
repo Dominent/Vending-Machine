@@ -1,7 +1,8 @@
 # Vending Machine Application
 
 ## Demo
-https://drive.google.com/uc?id=1CRdZTydz8j4Ns-jTPDW7z9ZUcfPljes-
+[![Video Name](https://github.com/Dominent/Vending-Machine/assets/2464156/704e9104-0258-4533-b9e4-3b29fe15938f
+)](https://drive.google.com/file/d/1CRdZTydz8j4Ns-jTPDW7z9ZUcfPljes-/view?usp=sharing "Watch the Video")
 
 ## Overview
 
