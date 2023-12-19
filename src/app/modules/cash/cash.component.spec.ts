@@ -37,6 +37,8 @@ describe('CashComponent', () => {
 
     productStoreFacadeServiceSpy.actions.fetchProduct = jasmine.createSpy();
     productStoreFacadeServiceSpy.actions.addProduct = jasmine.createSpy();
+    productStoreFacadeServiceSpy.actions.buySelectedProducts =
+      jasmine.createSpy();
     productStoreFacadeServiceSpy.actions.resetSelectedProducts =
       jasmine.createSpy();
     productStoreFacadeServiceSpy.state.products$ = of([]);
@@ -91,7 +93,7 @@ describe('CashComponent', () => {
     );
     component.cashChangeReturnComponent = cashChangeReturnComponentSpy;
 
-    component.handleBuy(50, 100);
+    component.handleBuy(50, 100, []);
     expect(
       cashChangeReturnComponentSpy.simulateChangeReturn
     ).toHaveBeenCalledWith(10);

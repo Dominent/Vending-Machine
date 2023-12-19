@@ -47,12 +47,18 @@ export class CashComponent implements OnInit {
     this._cashStoreFacadeService.actions.fetchDenominations();
   }
 
-  handleBuy(totalCash: number | null, totalInsertedCash: number | null) {
+  handleBuy(
+    totalCash: number | null,
+    totalInsertedCash: number | null,
+    products: IProduct[]
+  ) {
     this.cashChangeReturnComponent?.simulateChangeReturn(10);
 
     setTimeout(() => {
       this.handleClear();
     }, 5 * 1000);
+
+    this._productStoreFacadeService.actions.buySelectedProducts(products);
   }
 
   public handleClear() {

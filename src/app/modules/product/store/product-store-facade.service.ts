@@ -25,6 +25,10 @@ export class ProductStoreFacadeService {
         ),
       resetSelectedProducts: () =>
         this._store.dispatch(fromActions.resetSelectedProduct()),
+      buySelectedProducts: (products: IProduct[]) =>
+        this._store.dispatch(
+          fromActions.buySelectedProducts({ payload: { products } })
+        ),
     };
   }
 

@@ -22,3 +22,8 @@ export const addSelectedProduct = createAction(
 export const resetSelectedProduct = createAction(
   '[PRODUCT]RESET_SELECTED_PRODUCT'
 );
+
+export const buySelectedProducts = createAction(
+  '[PRODUCT]BUY_SELECTED_PRODUCTS',
+  props<{ payload: { products: IProduct[] } }>()
+);

@@ -6,6 +6,12 @@
     justify-content: center;
     flex-direction: column;
 
+    &.no-quantity {
+      opacity: 0.2;
+      cursor: default;
+      pointer-events: none;
+    }
+
     &:hover {
       opacity: 0.5;
       cursor: pointer;

@@ -24,7 +24,9 @@
       mat-raised-button
       color="primary"
       [disabled]="!(vm.change && vm.selectedProducts?.length)"
-      (click)="handleBuy(vm.totalCash, vm.totalInsertedCash)"
+      (click)="
+        handleBuy(vm.totalCash, vm.totalInsertedCash, vm.selectedProducts!)
+      "
     >
       Buy
     </button>

@@ -55,5 +55,27 @@ export const productReducer = createReducer(
       ...state,
       selected: [],
     };
+  }),
+  on(fromActions.buySelectedProducts, (state, { payload: { products } }) => {
+    const countMap: { [productId: number]: number } = {};
+    products.forEach(({ id }) => {
+      if (!countMap[id]) {
+        countMap[id] = 1;
+      } else {
+        countMap[id]++;
+      }
+    });
+
+    return {
+      ...state,
+      products: state.products.map((product) => {
+        //TODO(PPavlov): Quantity can be bellow zero, bug
+        let quantity = product.quantity - (countMap[product.id] || 0);
+        return {
+          ...product,
+          quantity: quantity < 0 ? 0 : quantity,
+        };
+      }),
+    };
   })
 );
